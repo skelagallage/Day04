@@ -1,0 +1,84 @@
+The basic notation of xpath
+---------------------------
+//HTML_ELEMENT[@Attribute_name='Attribute_value']
+
+ex : https://www.ebay.com/
+//input[@id='gh-ac']
+
+
+and - https://www.facebook.com/ -> CREATE NEW ACCOUNT
+-----------------------------------------------------
+//input[@type='text' and @name='firstname']
+
+
+text() - https://www.ebay.com/
+--------------------------------
+//a[text()='Advanced']
+
+
+Parent/child
+------------
+//div[@id='mainContent']/div/ul/li/a[text()='Motors']
+//div[@id='mainContent']//li/a[text()='Motors']
+
+
+wildcard
+--------
+//* take whole html elements in a page
+//*[@*] take whole html elements which are having at least one attribute
+
+
+Calling elements like checkboxes via label - https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=mobile+phones&_sacat=15032
+-------------------------------------------
+//span[text()='Apple']/../../../span/input
+
+
+contains - https://www.ebay.com/
+---------------------------------
+//a[contains(text(),'Advan')]
+//input[contains(@id,'-btn')]
+
+self
+----
+//input/self::*
+
+attribute
+---------
+//input/attribute::*
+
+child
+-----
+//form[@id='gh-f']/child::*
+
+descendant
+----------
+//form[@id='gh-f']/descendant::*
+
+descendant-or-self
+------------------
+//form[@id='gh-f']/descendant-or-self::*
+
+following-sibling
+------------------
+//form[@id='gh-f']/input[@name='_from']/following-sibling::*
+
+following
+----------
+//form[@id='gh-f']/input[@name='_from']/following::*
+
+
+parent
+------
+//form[@id='gh-f']/parent::*
+
+ancestor
+--------
+//form[@id='gh-f']/ancestor::*
+
+ancestor-or-self
+----------------
+//form[@id='gh-f']/ancestor-or-self::*
+
+preceding-sibling
+------------------
+//form[@id='gh-f']/table/preceding-sibling::*
