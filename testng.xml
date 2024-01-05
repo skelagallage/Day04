@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" parallel="methods" thread-count="3" name="C:/UCSC_Automation_Java/Day04">
+<suite name="All Test Suite" parallel="methods" thread-count="3" >
+    <test verbose="2" preserve-order="true" name="C:/UCSC_Automation_Java/Day04">
         <parameter name="fname" value="Sanath"></parameter>
         <parameter name="age" value="35"></parameter>
         <classes>
