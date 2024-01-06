@@ -8,6 +8,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import java.time.Duration;
+
 public class TestNGUtil {
 
     protected static WebDriver driver;
@@ -23,6 +25,14 @@ public class TestNGUtil {
 //        options.addArguments("--headless=new");
         driver = WebDriverManager.chromedriver().capabilities(options).create();
         driver.manage().window().maximize();
+
+        /**
+         * Make page load timeout as 5 seconds.
+         * So, page should load within 5 seconds.
+         */
+//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+
+//        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(200));
     }
 
     @AfterTest
