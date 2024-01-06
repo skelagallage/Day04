@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="methods" thread-count="3" >
+<suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/UCSC_Automation_Java/Day04">
-        <parameter name="fname" value="Sanath"></parameter>
-        <parameter name="age" value="35"></parameter>
         <classes>
-            <class name="com.ucsc.automation.testng.ParallelEx">
+            <class name="com.ucsc.automation.selenium.EbayEx">
                 <methods>
-                    <include name="method1"/>
-                    <include name="method2"/>
-                    <include name="method3"/>
+                    <include name="searchMobilePhones"/>
                 </methods>
             </class>
-<!--            <class name="com.ucsc.automation.testng.ParamsEx">-->
-<!--                <methods>-->
-<!--                    <include name="studentDetail"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="com.ucsc.automation.testng.TestNGXmlEx">-->
-<!--                <methods>-->
-<!--                    <include name="method1"/>-->
-<!--                    <exclude name="method2"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="com.ucsc.automation.testng.TestNGXmlExTwo">-->
-<!--                <methods>-->
-<!--                    <include name="method2"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+            <class name="com.ucsc.automation.selenium.OdelEx">
+                <methods>
+                    <include name="searchCapsAndHatsForWomen"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
